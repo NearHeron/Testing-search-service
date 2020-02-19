@@ -1,31 +1,32 @@
 import React from "react";
 import "./SearchFormsComponent.css"
 
-const SearchFormComponents = () => {
+const SearchFormComponents = ({ handleSubmit, handleChangeDescription, handleChangeLocation, isChecked, description, location }) => {
+
   return (
     <div id="search" className="clearfix">
-      <form className="positions">
+      <form className="positions" onSubmit={handleSubmit}>
         <div className="bucket description">
           <h3>Job Description</h3>
           <div className="field">
-            <input type="text" name="description" id="description_field" autoComplete="off"/>
+            <input type="text" name="description" id="description_field" value={description} onChange={handleChangeDescription} autoComplete="off"/>
           </div>
         </div>
 
         <div className="bucket location">
           <h3>Location</h3>
           <div className="field">
-            <input type="text" name="location" id="location_field" autoComplete="off"/>
+            <input type="text" name="location" id="location_field" value={location} onChange={handleChangeLocation} autoComplete="off"/>
           </div>
         </div>
 
         <div className="bucket fulltime">
           <label className="simplefield">
-            <input type="checkbox" name="full_time" id="full_time_field"/>
+            <input type="checkbox" name="full_time" id="full_time_field" onChange={isChecked}/>
             Full Time Only
           </label>
         </div>
-        <button type="submit">Search</button>
+        <input type="submit" value="Search" />
       </form>
     </div>
   )

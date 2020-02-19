@@ -1,5 +1,5 @@
 import { call, all } from 'redux-saga/effects';
-import { watchFetchJob } from "../ducks/jobs/sagas"
+import { watchFetchJob } from "../ducks/jobs";
 
 
 export default function*() {

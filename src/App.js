@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderComponent from "./Components/Header";
-import SearchFormComponents from "./Components/SearchForms";
+import SearchFormsContainer from "./Containers/SearchForms";
 import { withRouter } from 'react-router';
 
 const App = () => {
@@ -8,7 +8,7 @@ const App = () => {
     <React.Fragment>
       <HeaderComponent/>
       <div className="wrapper">
-        <SearchFormComponents/>
+        <SearchFormsContainer />
       </div>
     </React.Fragment>
 

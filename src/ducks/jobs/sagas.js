@@ -11,7 +11,7 @@ export function* watchFetchJob() {
 function* fetchJobAsync({ credentials }) {
   try {
     const data = yield call(services.getJobs, credentials);
-
+    console.log(data);
     yield put(actions.fetchJobsSuccess(data));
   } catch (error) {
     yield put(actions.fetchJobsError(error));

@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import { createRouterReducer } from "../ducks/router";
-import { jobReducer } from "../ducks/jobs/reducer";
+import { jobReducer } from "../ducks/jobs";
 
 export default history =>
   combineReducers({
