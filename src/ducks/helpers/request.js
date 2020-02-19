@@ -3,7 +3,7 @@ import humps from "humps"
 import  { BASE_URL, BASE_URL_TEST } from "./config";
 
 const request = axios.create({
-  baseURL: BASE_URL_TEST,
+  baseURL: BASE_URL,
 });
 
 /* eslint-disable no-use-before-define */
