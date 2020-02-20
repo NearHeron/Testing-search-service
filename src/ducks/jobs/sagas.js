@@ -8,11 +8,10 @@ export function* watchFetchJob() {
   yield takeLatest(types.FETCH_JOBS_REQUEST, fetchJobAsync);
 }
 
-function* fetchJobAsync({ credentials }) {
+function* fetchJobAsync( credentials ) {
   try {
     const data = yield call(services.getJobs, credentials);
-    console.log(data);
-    yield put(actions.fetchJobsSuccess(data));
+    yield put(actions.fetchJobsSuccess(data.data));
   } catch (error) {
     yield put(actions.fetchJobsError(error));
   }

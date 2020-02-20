@@ -9,7 +9,6 @@ export default {
         full_time: full_time,
       },
     });
-/*    return request.get('planets/1/')*/
   }
 };
 

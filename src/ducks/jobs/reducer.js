@@ -6,6 +6,8 @@ const initialState = {
   description: null,
   location: null,
   full_time: false,
+  allIds: [],
+  byId: {},
   isLoading: false
 };
 
@@ -20,6 +22,21 @@ export const jobReducer = (state = initialState, action) => {
       return {
         ...state,
         jobs: action.jobs,
+        ...action.jobs.reduce(
+          (result, item) => ({
+            allIds: result.allIds.includes(item.id)
+              ? result.allIds
+              : [...result.allIds, item.id],
+            byId: {
+              ...result.byId,
+              [item.id]: item,
+            },
+          }),
+          {
+            allIds: state.allIds,
+            byId: state.byId,
+          },
+        ),
         isLoading: false
       };
     case types.FETCH_JOBS_ERROR:
