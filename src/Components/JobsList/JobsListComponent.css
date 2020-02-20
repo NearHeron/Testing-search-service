@@ -1,0 +1,10 @@
+.jobListItem {
+    margin: 1rem 0;
+    padding: 0 5px;
+    min-height: 3rem;
+    min-width: 30%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 10px;
+}

@@ -18,5 +18,11 @@ export const jobActions = {
       type: types.FETCH_JOBS_ERROR,
       error
     }
+  },
+  selectedVacancy(id) {
+    return {
+      type: types.SELECTED_JOB_POSITION,
+      id
+    }
   }
 };

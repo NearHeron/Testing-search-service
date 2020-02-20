@@ -3,9 +3,7 @@ import * as types from "./types"
 const initialState = {
   jobs: [],
   error: null,
-  description: null,
-  location: null,
-  full_time: false,
+  selectedId: null,
   allIds: [],
   byId: {},
   isLoading: false
@@ -45,6 +43,11 @@ export const jobReducer = (state = initialState, action) => {
         error: action.error,
         isLoading: false
       };
+    case types.SELECTED_JOB_POSITION:
+      return {
+        ...state,
+        selectedId: action.id
+      }
     default:
       return state;
   }

@@ -12,7 +12,6 @@ const SearchFormsContainer = ({ fetchJobs }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(description, location, checkbox);
     fetchJobs({
       description,
       location,

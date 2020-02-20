@@ -24,3 +24,7 @@ h3, p, label {
     margin: 0 auto;
     width: 928px;
 }
+
+ul {
+    list-style-type: none;
+}
